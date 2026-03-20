@@ -55,6 +55,7 @@ export function addItem (data = { done: false, title: "" }) {
 
 	let done = element.querySelector(".done");
 	done.checked = data.done;
+	done.addEventListener("change", () => updateDoneCount() );
 
 	updateCounts();
 	focusTask(element);
